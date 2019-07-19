@@ -47,7 +47,7 @@ export default class Editor extends Component {
           value={this.state.markdown}
           onChange={this.handleChange}
         />
-        <Preview />
+        <Preview markdown={this.state.markdown} />
       </React.Fragment>
     );
   }
