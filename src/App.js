@@ -1,8 +1,12 @@
 import React from "react";
-import "./App.css";
+import Editor from "./components/Editor";
 
 function App() {
-  return <div />;
+  return (
+    <React.Fragment>
+      <Editor />
+    </React.Fragment>
+  );
 }
 
 export default App;
