@@ -31,10 +31,14 @@ for (let i = 0; i < 20; i++) {
 `;
 
 export default class Editor extends Component {
+  state = {
+    markdown: placeholder
+  };
+
   render() {
     return (
       <React.Fragment>
-        <textarea id="editor" />
+        <textarea id="editor" value={this.state.markdown} />
         <Preview />
       </React.Fragment>
     );
