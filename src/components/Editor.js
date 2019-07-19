@@ -35,10 +35,18 @@ export default class Editor extends Component {
     markdown: placeholder
   };
 
+  handleChange = event => {
+    this.setState({ markdown: event.target.value });
+  };
+
   render() {
     return (
       <React.Fragment>
-        <textarea id="editor" value={this.state.markdown} />
+        <textarea
+          id="editor"
+          value={this.state.markdown}
+          onChange={this.handleChange}
+        />
         <Preview />
       </React.Fragment>
     );
