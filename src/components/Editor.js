@@ -23,9 +23,9 @@ for (let i = 0; i < 20; i++) {
 3. Eggs
 4. Orange Juice
 
-> Stefan
+> Blockquote
 
-**I am bold**
+**I am bold text**
 
 ![Just an image of a husky](https://i.pinimg.com/originals/cd/a5/1b/cda51b70758b5302de57225b7c52a202.jpg)
 `;
@@ -41,14 +41,16 @@ export default class Editor extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div>
+        <h2>Editor</h2>
         <textarea
           id="editor"
           value={this.state.markdown}
           onChange={this.handleChange}
         />
+        <h2>Preview</h2>
         <Preview markdown={this.state.markdown} />
-      </React.Fragment>
+      </div>
     );
   }
 }
